@@ -1,0 +1,33 @@
+{
+    "sessionId": "08cc9121c34815f0f7d0e731845f752b",
+    "capabilities": {
+        "acceptInsecureCerts": true,
+        "browserName": "chrome",
+        "browserVersion": "120.0.6099.217",
+        "chrome": {
+            "chromedriverVersion": "120.0.6099.109 (3419140ab665596f21b385ce136419fde0924272-refs/branch-heads/6099@{#1483})",
+            "userDataDir": "C:\\Users\\DCCPL\\AppData\\Local\\Temp\\scoped_dir27108_833514802"
+        },
+        "fedcm:accounts": true,
+        "goog:chromeOptions": {
+            "debuggerAddress": "localhost:58347"
+        },
+        "networkConnectionEnabled": false,
+        "pageLoadStrategy": "normal",
+        "platformName": "windows",
+        "proxy": {},
+        "setWindowRect": true,
+        "strictFileInteractability": false,
+        "timeouts": {
+            "implicit": 15000,
+            "pageLoad": 20000,
+            "script": 30000
+        },
+        "unhandledPromptBehavior": "dismiss and notify",
+        "webauthn:extension:credBlob": true,
+        "webauthn:extension:largeBlob": true,
+        "webauthn:extension:minPinLength": true,
+        "webauthn:extension:prf": true,
+        "webauthn:virtualAuthenticators": true
+    }
+}

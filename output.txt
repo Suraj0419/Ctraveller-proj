@@ -1,0 +1,203 @@
+
+Execution of 4 workers started at 2024-01-18T11:07:05.255Z
+
+2024-01-18T11:07:05.279Z INFO @wdio/cli:launcher: Run onPrepare hook
+2024-01-18T11:07:05.280Z INFO @wdio/utils: Setting up browser driver for: chrome@stable
+2024-01-18T11:07:05.282Z INFO @wdio/utils: Setting up browser binaries for: chrome@stable
+2024-01-18T11:07:05.284Z INFO webdriver: Downloading Chromedriver v120.0.6099.218
+2024-01-18T11:07:06.512Z INFO webdriver: Download of Chromedriver v120.0.6099.109 was successful
+2024-01-18T11:07:06.518Z INFO @wdio/cli:launcher: Run onWorkerStart hook
+2024-01-18T11:07:06.519Z INFO @wdio/cli:launcher: Run onWorkerStart hook
+2024-01-18T11:07:06.519Z INFO @wdio/cli:launcher: Run onWorkerStart hook
+2024-01-18T11:07:06.520Z INFO @wdio/local-runner: Start worker 0-0 with arg: config/wdio.test.conf.ts,--cucumberOpts.tagExpression='@demo'
+2024-01-18T11:07:06.530Z INFO @wdio/local-runner: Start worker 0-1 with arg: config/wdio.test.conf.ts,--cucumberOpts.tagExpression='@demo'
+2024-01-18T11:07:06.538Z INFO @wdio/local-runner: Start worker 0-2 with arg: config/wdio.test.conf.ts,--cucumberOpts.tagExpression='@demo'
+[0-0] 2024-01-18T11:07:08.339Z INFO @wdio/local-runner: Run worker command: run
+[0-1] 2024-01-18T11:07:08.349Z INFO @wdio/local-runner: Run worker command: run
+[0-2] 2024-01-18T11:07:08.383Z INFO @wdio/local-runner: Run worker command: run
+2024-01-18T11:07:09.577Z INFO @wdio/cli: [0-0] SKIPPED in chrome - file:///C:/Users/DCCPL/Documents/wdio-cucumber-e2e-test/test/features/demo/cucumberDemo.feature
+2024-01-18T11:07:09.578Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
+2024-01-18T11:07:09.578Z INFO @wdio/cli:launcher: Run onWorkerStart hook
+2024-01-18T11:07:09.579Z INFO @wdio/local-runner: Start worker 0-3 with arg: config/wdio.test.conf.ts,--cucumberOpts.tagExpression='@demo'
+2024-01-18T11:07:09.585Z INFO @wdio/cli: [0-1] SKIPPED in chrome - file:///C:/Users/DCCPL/Documents/wdio-cucumber-e2e-test/test/features/demo/demo.feature
+2024-01-18T11:07:09.585Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
+2024-01-18T11:07:09.619Z INFO @wdio/cli: [0-2] SKIPPED in chrome - file:///C:/Users/DCCPL/Documents/wdio-cucumber-e2e-test/test/features/demo/webInteractions.feature
+2024-01-18T11:07:09.620Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
+[0-3] 2024-01-18T11:07:10.881Z INFO @wdio/local-runner: Run worker command: run
+[0-3] RUNNING in chrome - file:///C:/Users/DCCPL/Documents/wdio-cucumber-e2e-test/test/features/inventory/inventory.feature
+[0-3] 2024-01-18T11:07:11.583Z INFO webdriver: Initiate new session using the WebDriver protocol
+[0-3] 2024-01-18T11:07:11.815Z INFO webdriver: Downloading Chromedriver v120.0.6099.218
+[0-3] 2024-01-18T11:07:12.920Z INFO webdriver: Download of Chromedriver v120.0.6099.109 was successful
+[0-3] 2024-01-18T11:07:12.976Z INFO chromedriver: Starting ChromeDriver 120.0.6099.109 (3419140ab665596f21b385ce136419fde0924272-refs/branch-heads/6099@{#1483}) on port 52209
+[0-3] 2024-01-18T11:07:12.977Z INFO chromedriver: Remote connections are allowed by an allowlist (0.0.0.0).
+[0-3] 2024-01-18T11:07:12.977Z INFO chromedriver: Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+[0-3] 2024-01-18T11:07:12.980Z INFO chromedriver: ChromeDriver was started successfully.
+[0-3] 2024-01-18T11:07:13.942Z INFO @wdio/utils: Started Chromedriver v120.0.6099.218 with params --port=52209 --allowed-origins=* --allowed-ips=0.0.0.0 in 2136ms on port 52209
+[0-3] 2024-01-18T11:07:13.951Z INFO webdriver: [POST] http://0.0.0.0:52209/session
+[0-3] 2024-01-18T11:07:13.951Z INFO webdriver: DATA {
+[0-3]   capabilities: {
+[0-3]     alwaysMatch: {
+[0-3]       browserName: 'chrome',
+[0-3]       'goog:chromeOptions': [Object],
+[0-3]       acceptInsecureCerts: true,
+[0-3]       timeouts: [Object]
+[0-3]     },
+[0-3]     firstMatch: [ {} ]
+[0-3]   },
+[0-3]   desiredCapabilities: {
+[0-3]     browserName: 'chrome',
+[0-3]     'goog:chromeOptions': {
+[0-3]       binary: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
+[0-3]       args: [Array]
+[0-3]     },
+[0-3]     acceptInsecureCerts: true,
+[0-3]     timeouts: { implicit: 5000, pageLoad: 20000, script: 30000 }
+[0-3]   }
+[0-3] }
+[0-3] [[32mINFO[39m]: INTV_TC001 : Started to login sause demo app...
+[0-3] 2024-01-18T11:07:14.865Z INFO webdriver: COMMAND navigateTo("https://www.saucedemo.com/")
+[0-3] 2024-01-18T11:07:14.866Z INFO webdriver: [POST] http://0.0.0.0:52209/session/7c8dd4554ff65214cdb050a662d9f82a/url
+[0-3] 2024-01-18T11:07:14.866Z INFO webdriver: DATA { url: 'https://www.saucedemo.com/' }
+[0-3] 2024-01-18T11:07:15.778Z INFO webdriver: RESULT null
+[0-3] 2024-01-18T11:07:15.785Z INFO webdriver: COMMAND findElement("css selector", "#user-name")
+[0-3] 2024-01-18T11:07:15.786Z INFO webdriver: [POST] http://0.0.0.0:52209/session/7c8dd4554ff65214cdb050a662d9f82a/element
+[0-3] 2024-01-18T11:07:15.786Z INFO webdriver: DATA { using: 'css selector', value: '#user-name' }
+[0-3] 2024-01-18T11:07:15.800Z INFO webdriver: RESULT {
+[0-3]   'element-6066-11e4-a52e-4f735466cecf': '1C9BAE3BCEAD39B934CD86FB3411087E_element_7'
+[0-3] }
+[0-3] 2024-01-18T11:07:15.808Z INFO webdriver: COMMAND elementClear("1C9BAE3BCEAD39B934CD86FB3411087E_element_7")
+[0-3] 2024-01-18T11:07:15.808Z INFO webdriver: [POST] http://0.0.0.0:52209/session/7c8dd4554ff65214cdb050a662d9f82a/element/1C9BAE3BCEAD39B934CD86FB3411087E_element_7/clear
+[0-3] 2024-01-18T11:07:15.843Z INFO webdriver: RESULT null
+[0-3] 2024-01-18T11:07:15.846Z INFO webdriver: COMMAND elementSendKeys("1C9BAE3BCEAD39B934CD86FB3411087E_element_7", "problem_user")
+[0-3] 2024-01-18T11:07:15.846Z INFO webdriver: [POST] http://0.0.0.0:52209/session/7c8dd4554ff65214cdb050a662d9f82a/element/1C9BAE3BCEAD39B934CD86FB3411087E_element_7/value
+[0-3] 2024-01-18T11:07:15.846Z INFO webdriver: DATA { text: 'problem_user' }
+[0-3] 2024-01-18T11:07:15.906Z INFO webdriver: RESULT null
+[0-3] 2024-01-18T11:07:15.909Z INFO webdriver: COMMAND findElement("css selector", "#password")
+[0-3] 2024-01-18T11:07:15.910Z INFO webdriver: [POST] http://0.0.0.0:52209/session/7c8dd4554ff65214cdb050a662d9f82a/element
+[0-3] 2024-01-18T11:07:15.910Z INFO webdriver: DATA { using: 'css selector', value: '#password' }
+[0-3] 2024-01-18T11:07:15.923Z INFO webdriver: RESULT {
+[0-3]   'element-6066-11e4-a52e-4f735466cecf': '1C9BAE3BCEAD39B934CD86FB3411087E_element_10'
+[0-3] }
+[0-3] 2024-01-18T11:07:15.929Z INFO webdriver: COMMAND elementClear("1C9BAE3BCEAD39B934CD86FB3411087E_element_10")
+[0-3] 2024-01-18T11:07:15.930Z INFO webdriver: [POST] http://0.0.0.0:52209/session/7c8dd4554ff65214cdb050a662d9f82a/element/1C9BAE3BCEAD39B934CD86FB3411087E_element_10/clear
+[0-3] 2024-01-18T11:07:15.956Z INFO webdriver: RESULT null
+[0-3] 2024-01-18T11:07:15.959Z INFO webdriver: COMMAND elementSendKeys("1C9BAE3BCEAD39B934CD86FB3411087E_element_10", "secret_sauce")
+[0-3] 2024-01-18T11:07:15.959Z INFO webdriver: [POST] http://0.0.0.0:52209/session/7c8dd4554ff65214cdb050a662d9f82a/element/1C9BAE3BCEAD39B934CD86FB3411087E_element_10/value
+[0-3] 2024-01-18T11:07:15.959Z INFO webdriver: DATA { text: 'secret_sauce' }
+[0-3] 2024-01-18T11:07:16.004Z INFO webdriver: RESULT null
+[0-3] 2024-01-18T11:07:16.006Z INFO webdriver: COMMAND findElement("css selector", "#login-button")
+[0-3] 2024-01-18T11:07:16.007Z INFO webdriver: [POST] http://0.0.0.0:52209/session/7c8dd4554ff65214cdb050a662d9f82a/element
+[0-3] 2024-01-18T11:07:16.007Z INFO webdriver: DATA { using: 'css selector', value: '#login-button' }
+[0-3] 2024-01-18T11:07:16.020Z INFO webdriver: RESULT {
+[0-3]   'element-6066-11e4-a52e-4f735466cecf': '1C9BAE3BCEAD39B934CD86FB3411087E_element_5'
+[0-3] }
+[0-3] 2024-01-18T11:07:16.024Z INFO webdriver: COMMAND elementClick("1C9BAE3BCEAD39B934CD86FB3411087E_element_5")
+[0-3] 2024-01-18T11:07:16.025Z INFO webdriver: [POST] http://0.0.0.0:52209/session/7c8dd4554ff65214cdb050a662d9f82a/element/1C9BAE3BCEAD39B934CD86FB3411087E_element_5/click
+[0-3] 2024-01-18T11:07:16.087Z INFO webdriver: RESULT null
+[0-3] 2024-01-18T11:07:16.090Z INFO webdriver: COMMAND findElement("css selector", ".title")
+[0-3] 2024-01-18T11:07:16.090Z INFO webdriver: [POST] http://0.0.0.0:52209/session/7c8dd4554ff65214cdb050a662d9f82a/element
+[0-3] 2024-01-18T11:07:16.090Z INFO webdriver: DATA { using: 'css selector', value: '.title' }
+[0-3] 2024-01-18T11:07:16.104Z INFO webdriver: RESULT {
+[0-3]   'element-6066-11e4-a52e-4f735466cecf': '1C9BAE3BCEAD39B934CD86FB3411087E_element_21'
+[0-3] }
+[0-3] 2024-01-18T11:07:16.109Z INFO webdriver: COMMAND getElementText("1C9BAE3BCEAD39B934CD86FB3411087E_element_21")
+[0-3] 2024-01-18T11:07:16.110Z INFO webdriver: [GET] http://0.0.0.0:52209/session/7c8dd4554ff65214cdb050a662d9f82a/element/1C9BAE3BCEAD39B934CD86FB3411087E_element_21/text
+[0-3] 2024-01-18T11:07:16.127Z INFO webdriver: RESULT Products
+[0-3] [[32mINFO[39m]: INTV_TC001 : Checking the product list...
+[0-3] 2024-01-18T11:07:16.136Z INFO webdriver: COMMAND findElements("css selector", ".inventory_item_name")
+[0-3] 2024-01-18T11:07:16.136Z INFO webdriver: [POST] http://0.0.0.0:52209/session/7c8dd4554ff65214cdb050a662d9f82a/elements
+[0-3] 2024-01-18T11:07:16.137Z INFO webdriver: DATA { using: 'css selector', value: '.inventory_item_name' }
+[0-3] 2024-01-18T11:07:16.160Z INFO webdriver: RESULT [
+[0-3]   {
+[0-3]     'element-6066-11e4-a52e-4f735466cecf': '1C9BAE3BCEAD39B934CD86FB3411087E_element_28'
+[0-3]   },
+[0-3]   {
+[0-3]     'element-6066-11e4-a52e-4f735466cecf': '1C9BAE3BCEAD39B934CD86FB3411087E_element_29'
+[0-3]   },
+[0-3]   {
+[0-3]     'element-6066-11e4-a52e-4f735466cecf': '1C9BAE3BCEAD39B934CD86FB3411087E_element_30'
+[0-3]   },
+[0-3]   {
+[0-3]     'element-6066-11e4-a52e-4f735466cecf': '1C9BAE3BCEAD39B934CD86FB3411087E_element_31'
+[0-3]   },
+[0-3]   {
+[0-3]     'element-6066-11e4-a52e-4f735466cecf': '1C9BAE3BCEAD39B934CD86FB3411087E_element_32'
+[0-3]   },
+[0-3]   {
+[0-3]     'element-6066-11e4-a52e-4f735466cecf': '1C9BAE3BCEAD39B934CD86FB3411087E_element_33'
+[0-3]   }
+[0-3] ]
+[0-3] [[32mINFO[39m]: INTV_TC001 : Checking the product price...
+[0-3] 2024-01-18T11:07:16.175Z INFO webdriver: COMMAND findElements("css selector", ".inventory_item_price")
+[0-3] 2024-01-18T11:07:16.175Z INFO webdriver: [POST] http://0.0.0.0:52209/session/7c8dd4554ff65214cdb050a662d9f82a/elements
+[0-3] 2024-01-18T11:07:16.175Z INFO webdriver: DATA { using: 'css selector', value: '.inventory_item_price' }
+[0-3] 2024-01-18T11:07:16.202Z INFO webdriver: RESULT [
+[0-3]   {
+[0-3]     'element-6066-11e4-a52e-4f735466cecf': '1C9BAE3BCEAD39B934CD86FB3411087E_element_34'
+[0-3]   },
+[0-3]   {
+[0-3]     'element-6066-11e4-a52e-4f735466cecf': '1C9BAE3BCEAD39B934CD86FB3411087E_element_35'
+[0-3]   },
+[0-3]   {
+[0-3]     'element-6066-11e4-a52e-4f735466cecf': '1C9BAE3BCEAD39B934CD86FB3411087E_element_36'
+[0-3]   },
+[0-3]   {
+[0-3]     'element-6066-11e4-a52e-4f735466cecf': '1C9BAE3BCEAD39B934CD86FB3411087E_element_37'
+[0-3]   },
+[0-3]   {
+[0-3]     'element-6066-11e4-a52e-4f735466cecf': '1C9BAE3BCEAD39B934CD86FB3411087E_element_38'
+[0-3]   },
+[0-3]   {
+[0-3]     'element-6066-11e4-a52e-4f735466cecf': '1C9BAE3BCEAD39B934CD86FB3411087E_element_39'
+[0-3]   }
+[0-3] ]
+[0-3] 2024-01-18T11:07:16.211Z INFO webdriver: COMMAND getElementText("1C9BAE3BCEAD39B934CD86FB3411087E_element_34")
+[0-3] 2024-01-18T11:07:16.211Z INFO webdriver: [GET] http://0.0.0.0:52209/session/7c8dd4554ff65214cdb050a662d9f82a/element/1C9BAE3BCEAD39B934CD86FB3411087E_element_34/text
+[0-3] 2024-01-18T11:07:16.245Z INFO webdriver: RESULT $29.99
+[0-3] 2024-01-18T11:07:16.247Z INFO webdriver: COMMAND getElementText("1C9BAE3BCEAD39B934CD86FB3411087E_element_35")
+[0-3] 2024-01-18T11:07:16.247Z INFO webdriver: [GET] http://0.0.0.0:52209/session/7c8dd4554ff65214cdb050a662d9f82a/element/1C9BAE3BCEAD39B934CD86FB3411087E_element_35/text
+[0-3] 2024-01-18T11:07:16.270Z INFO webdriver: RESULT $9.99
+[0-3] 2024-01-18T11:07:16.272Z INFO webdriver: COMMAND getElementText("1C9BAE3BCEAD39B934CD86FB3411087E_element_36")
+[0-3] 2024-01-18T11:07:16.272Z INFO webdriver: [GET] http://0.0.0.0:52209/session/7c8dd4554ff65214cdb050a662d9f82a/element/1C9BAE3BCEAD39B934CD86FB3411087E_element_36/text
+[0-3] 2024-01-18T11:07:16.299Z INFO webdriver: RESULT $15.99
+[0-3] 2024-01-18T11:07:16.301Z INFO webdriver: COMMAND getElementText("1C9BAE3BCEAD39B934CD86FB3411087E_element_37")
+[0-3] 2024-01-18T11:07:16.301Z INFO webdriver: [GET] http://0.0.0.0:52209/session/7c8dd4554ff65214cdb050a662d9f82a/element/1C9BAE3BCEAD39B934CD86FB3411087E_element_37/text
+[0-3] 2024-01-18T11:07:16.310Z INFO webdriver: RESULT $49.99
+[0-3] 2024-01-18T11:07:16.312Z INFO webdriver: COMMAND getElementText("1C9BAE3BCEAD39B934CD86FB3411087E_element_38")
+[0-3] 2024-01-18T11:07:16.313Z INFO webdriver: [GET] http://0.0.0.0:52209/session/7c8dd4554ff65214cdb050a662d9f82a/element/1C9BAE3BCEAD39B934CD86FB3411087E_element_38/text
+[0-3] 2024-01-18T11:07:16.324Z INFO webdriver: RESULT $7.99
+[0-3] 2024-01-18T11:07:16.325Z INFO webdriver: COMMAND getElementText("1C9BAE3BCEAD39B934CD86FB3411087E_element_39")
+[0-3] 2024-01-18T11:07:16.325Z INFO webdriver: [GET] http://0.0.0.0:52209/session/7c8dd4554ff65214cdb050a662d9f82a/element/1C9BAE3BCEAD39B934CD86FB3411087E_element_39/text
+[0-3] 2024-01-18T11:07:16.334Z INFO webdriver: RESULT $15.99
+[0-3] 2024-01-18T11:07:16.342Z INFO webdriver: COMMAND deleteSession()
+[0-3] 2024-01-18T11:07:16.343Z INFO webdriver: [DELETE] http://0.0.0.0:52209/session/7c8dd4554ff65214cdb050a662d9f82a
+[0-3] 2024-01-18T11:07:16.379Z INFO webdriver: RESULT null
+[0-3] 2024-01-18T11:07:16.380Z INFO webdriver: Kill C:\Users\DCCPL\AppData\Local\Temp\chromedriver\win64-120.0.6099.109\chromedriver-win64\chromedriver.exe driver process with command line: --port=52209 --allowed-origins=* --allowed-ips=0.0.0.0
+[0-3] PASSED in chrome - file:///C:/Users/DCCPL/Documents/wdio-cucumber-e2e-test/test/features/inventory/inventory.feature
+2024-01-18T11:07:16.532Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
+2024-01-18T11:07:16.532Z INFO @wdio/cli:launcher: Run onComplete hook
+
+ "spec" Reporter:
+------------------------------------------------------------------
+[chrome-headless-shell 120.0.6099.217 windows #0-3] Running: chrome-headless-shell (v120.0.6099.217) on windows
+[chrome-headless-shell 120.0.6099.217 windows #0-3] Session ID: 7c8dd4554ff65214cdb050a662d9f82a
+[chrome-headless-shell 120.0.6099.217 windows #0-3]
+[chrome-headless-shell 120.0.6099.217 windows #0-3] » \test\features\inventory\inventory.feature
+[chrome-headless-shell 120.0.6099.217 windows #0-3] Inventory
+[chrome-headless-shell 120.0.6099.217 windows #0-3] INTV_TC001 : Demo Inventory
+[chrome-headless-shell 120.0.6099.217 windows #0-3]    ✓ Given As a Problem User I login to inventory web app
+[chrome-headless-shell 120.0.6099.217 windows #0-3]      │ UserType │ Username                │
+[chrome-headless-shell 120.0.6099.217 windows #0-3]      │ StdUser  │ standard_user           │
+[chrome-headless-shell 120.0.6099.217 windows #0-3]      │ ProbUser │ problem_user            │
+[chrome-headless-shell 120.0.6099.217 windows #0-3]      │ PerfUser │ performance_glitch_user │
+[chrome-headless-shell 120.0.6099.217 windows #0-3]    ✓ Then Inventory page should list 6 products
+[chrome-headless-shell 120.0.6099.217 windows #0-3]    ✓ Then Validate all products have valid price
+[chrome-headless-shell 120.0.6099.217 windows #0-3]
+[chrome-headless-shell 120.0.6099.217 windows #0-3] 3 passing (1.8s)
+
+
+Spec Files:	 1 passed, 3 skipped, 4 total (100% completed) in 00:00:11  
+
+2024-01-18T11:07:16.534Z INFO @wdio/local-runner: Shutting down spawned worker
+2024-01-18T11:07:16.792Z INFO @wdio/local-runner: Waiting for 0 to shut down gracefully
+2024-01-18T11:07:16.793Z INFO @wdio/local-runner: shutting down

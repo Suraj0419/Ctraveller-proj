@@ -1,0 +1,353 @@
+{
+    "gherkinDocument": {
+        "feature": {
+            "tags": [],
+            "location": {
+                "line": 1,
+                "column": 1
+            },
+            "language": "en",
+            "keyword": "Feature",
+            "name": "Inventory",
+            "description": "",
+            "children": [
+                {
+                    "scenario": {
+                        "id": "5d4c86e9-e2c7-47e8-bd03-a8afe47471d4",
+                        "tags": [
+                            {
+                                "location": {
+                                    "line": 3,
+                                    "column": 5
+                                },
+                                "name": "@demo",
+                                "id": "1bccaab9-3091-451a-9c99-cc521cd20ed7"
+                            },
+                            {
+                                "location": {
+                                    "line": 3,
+                                    "column": 11
+                                },
+                                "name": "@smoke",
+                                "id": "51da6487-31ab-4ba0-b9e4-3c572cd040c1"
+                            },
+                            {
+                                "location": {
+                                    "line": 3,
+                                    "column": 18
+                                },
+                                "name": "@debug",
+                                "id": "603d6e94-b7af-40e3-a42c-a062f376c650"
+                            }
+                        ],
+                        "location": {
+                            "line": 4,
+                            "column": 5
+                        },
+                        "keyword": "Scenario Outline",
+                        "name": "<TestID> : Demo Inventory",
+                        "description": "",
+                        "steps": [
+                            {
+                                "id": "3bdd8287-c2aa-4622-bb21-7bb4b64efe71",
+                                "location": {
+                                    "line": 5,
+                                    "column": 9
+                                },
+                                "keyword": "Given ",
+                                "keywordType": "Context",
+                                "text": "As a Problem User I login to inventory web app",
+                                "dataTable": {
+                                    "location": {
+                                        "line": 6,
+                                        "column": 13
+                                    },
+                                    "rows": [
+                                        {
+                                            "id": "9d9ad130-cf74-4456-a62c-97d06bc3b747",
+                                            "location": {
+                                                "line": 6,
+                                                "column": 13
+                                            },
+                                            "cells": [
+                                                {
+                                                    "location": {
+                                                        "line": 6,
+                                                        "column": 15
+                                                    },
+                                                    "value": "UserType"
+                                                },
+                                                {
+                                                    "location": {
+                                                        "line": 6,
+                                                        "column": 26
+                                                    },
+                                                    "value": "Username"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": "cb854a8c-a271-412b-a738-4127eb388643",
+                                            "location": {
+                                                "line": 7,
+                                                "column": 13
+                                            },
+                                            "cells": [
+                                                {
+                                                    "location": {
+                                                        "line": 7,
+                                                        "column": 15
+                                                    },
+                                                    "value": "StdUser"
+                                                },
+                                                {
+                                                    "location": {
+                                                        "line": 7,
+                                                        "column": 26
+                                                    },
+                                                    "value": "standard_user"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": "d319d6b6-51cc-4a1b-b6da-23777c9b9bab",
+                                            "location": {
+                                                "line": 8,
+                                                "column": 13
+                                            },
+                                            "cells": [
+                                                {
+                                                    "location": {
+                                                        "line": 8,
+                                                        "column": 15
+                                                    },
+                                                    "value": "ProbUser"
+                                                },
+                                                {
+                                                    "location": {
+                                                        "line": 8,
+                                                        "column": 26
+                                                    },
+                                                    "value": "problem_user"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": "bde95028-93bd-46d9-be05-8121debe8b34",
+                                            "location": {
+                                                "line": 9,
+                                                "column": 13
+                                            },
+                                            "cells": [
+                                                {
+                                                    "location": {
+                                                        "line": 9,
+                                                        "column": 15
+                                                    },
+                                                    "value": "PerfUser"
+                                                },
+                                                {
+                                                    "location": {
+                                                        "line": 9,
+                                                        "column": 26
+                                                    },
+                                                    "value": "performance_glitch_user"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "id": "a320c693-d899-4461-91e9-389cc25df51e",
+                                "location": {
+                                    "line": 11,
+                                    "column": 9
+                                },
+                                "keyword": "Then ",
+                                "keywordType": "Outcome",
+                                "text": "Inventory page should list <NumberOfProducts> products"
+                            },
+                            {
+                                "id": "eb322888-7d35-48a3-8a01-767b9a3fadea",
+                                "location": {
+                                    "line": 12,
+                                    "column": 9
+                                },
+                                "keyword": "Then ",
+                                "keywordType": "Outcome",
+                                "text": "Validate all products have valid price"
+                            }
+                        ],
+                        "examples": [
+                            {
+                                "id": "18f0755e-b643-4a37-b3a7-4fe3234168cd",
+                                "tags": [],
+                                "location": {
+                                    "line": 14,
+                                    "column": 9
+                                },
+                                "keyword": "Examples",
+                                "name": "",
+                                "description": "",
+                                "tableHeader": {
+                                    "id": "86d40653-f16a-4249-9589-e51aca4c5b25",
+                                    "location": {
+                                        "line": 15,
+                                        "column": 13
+                                    },
+                                    "cells": [
+                                        {
+                                            "location": {
+                                                "line": 15,
+                                                "column": 15
+                                            },
+                                            "value": "TestID"
+                                        },
+                                        {
+                                            "location": {
+                                                "line": 15,
+                                                "column": 28
+                                            },
+                                            "value": "NumberOfProducts"
+                                        }
+                                    ]
+                                },
+                                "tableBody": [
+                                    {
+                                        "id": "16a162cb-ce03-45ad-90dd-fdbf5947d487",
+                                        "location": {
+                                            "line": 16,
+                                            "column": 13
+                                        },
+                                        "cells": [
+                                            {
+                                                "location": {
+                                                    "line": 16,
+                                                    "column": 15
+                                                },
+                                                "value": "INTV_TC001"
+                                            },
+                                            {
+                                                "location": {
+                                                    "line": 16,
+                                                    "column": 28
+                                                },
+                                                "value": "6"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "comments": [],
+        "uri": "test\\features\\inventory\\inventory.feature"
+    },
+    "pickle": {
+        "id": "b0de2153-843f-4af5-aafb-3f8a04c2ca5b",
+        "uri": "test\\features\\inventory\\inventory.feature",
+        "astNodeIds": [
+            "5d4c86e9-e2c7-47e8-bd03-a8afe47471d4",
+            "16a162cb-ce03-45ad-90dd-fdbf5947d487"
+        ],
+        "name": "INTV_TC001 : Demo Inventory",
+        "language": "en",
+        "steps": [
+            {
+                "id": "a3224bca-5f28-42b4-bb09-327929b82fd0",
+                "text": "As a Problem User I login to inventory web app",
+                "type": "Context",
+                "argument": {
+                    "dataTable": {
+                        "rows": [
+                            {
+                                "cells": [
+                                    {
+                                        "value": "UserType"
+                                    },
+                                    {
+                                        "value": "Username"
+                                    }
+                                ]
+                            },
+                            {
+                                "cells": [
+                                    {
+                                        "value": "StdUser"
+                                    },
+                                    {
+                                        "value": "standard_user"
+                                    }
+                                ]
+                            },
+                            {
+                                "cells": [
+                                    {
+                                        "value": "ProbUser"
+                                    },
+                                    {
+                                        "value": "problem_user"
+                                    }
+                                ]
+                            },
+                            {
+                                "cells": [
+                                    {
+                                        "value": "PerfUser"
+                                    },
+                                    {
+                                        "value": "performance_glitch_user"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "astNodeIds": [
+                    "3bdd8287-c2aa-4622-bb21-7bb4b64efe71",
+                    "16a162cb-ce03-45ad-90dd-fdbf5947d487"
+                ],
+                "keyword": "Given "
+            },
+            {
+                "id": "887bb72b-0d11-48bf-a906-d70724d94c2b",
+                "text": "Inventory page should list 6 products",
+                "type": "Outcome",
+                "astNodeIds": [
+                    "a320c693-d899-4461-91e9-389cc25df51e",
+                    "16a162cb-ce03-45ad-90dd-fdbf5947d487"
+                ],
+                "keyword": "Then "
+            },
+            {
+                "id": "626fd1ee-1102-49b5-a903-c4cb32e68172",
+                "text": "Validate all products have valid price",
+                "type": "Outcome",
+                "astNodeIds": [
+                    "eb322888-7d35-48a3-8a01-767b9a3fadea",
+                    "16a162cb-ce03-45ad-90dd-fdbf5947d487"
+                ],
+                "keyword": "Then "
+            }
+        ],
+        "tags": [
+            {
+                "name": "@demo",
+                "astNodeId": "1bccaab9-3091-451a-9c99-cc521cd20ed7"
+            },
+            {
+                "name": "@smoke",
+                "astNodeId": "51da6487-31ab-4ba0-b9e4-3c572cd040c1"
+            },
+            {
+                "name": "@debug",
+                "astNodeId": "603d6e94-b7af-40e3-a42c-a062f376c650"
+            }
+        ]
+    },
+    "testCaseStartedId": "5922cc74-0ef7-4651-b525-3f01bfbe309c"
+}
