@@ -49,6 +49,7 @@ When(/^Click on submit button in the Move screen.$/, async function () {
   try {
     await RouteMoveTransaction.clickSubmitButton();
   } catch (err) {
+    console.log(err);
     throw new AssertionError(`Something failed ${err.message}`);
   }
 });
