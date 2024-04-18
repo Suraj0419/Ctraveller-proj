@@ -12,7 +12,8 @@
     "uat:demo": "cross-env && npx wdio config/wdio.uat.conf.ts --cucumberOpts.tagExpression='@demo'",
     "uat:smoke": "cross-env && npx wdio config/wdio.uat.conf.ts --cucumberOpts.tagExpression='@smoke'",
     "test:page": "cross-env && npx wdio config/wdio.test.conf.ts --cucumberOpts.tagExpression='@rnd'",
-    "test": "cross-env && npx wdio config/wdio.test.conf.ts"
+    "test": "cross-env && npx wdio config/wdio.test.conf.ts",
+    "dummyTest": "cross-env && npx wdio config/wdio.test.conf.ts"
   },
   "keywords": [
     "wdio",
