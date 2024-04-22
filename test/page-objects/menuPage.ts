@@ -24,6 +24,9 @@ class MenuPage{
     async releaseTransaction(){
         return await $('//span[text()="Release"]');
     }
+    async moveNonStandardTransaction(){
+        return await $('//span[text()="Move Non Std"]');
+    }
     }
     
     export default new MenuPage();

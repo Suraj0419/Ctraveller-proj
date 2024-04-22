@@ -1,7 +1,7 @@
 Feature: Hold  Route Card Transaction.
 
     Feature Description: Feature to hold Route Card.
-   @smoke  
+  
 Scenario Outline: Run Hold Transaction.
 
 Given Go to Hold Transaction screen.
