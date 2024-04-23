@@ -15,7 +15,7 @@ Examples:
     | TS_001  | ROUTE_6013 | Equipment A | Assembling | 
 
 
-
+@smoke 
 Scenario Outline: Run Move Non Standard Transaction with different processflow.
 
 Given Go to Move Non Standard Transaction screen.

@@ -36,6 +36,9 @@ class MenuPage{
     async moveNonStandardTransaction(){
         return await $('//span[text()="Move Non Std"]');
     }
+    async closeTransactionMenu(){
+        return await $("//span[text()='Close']");
+    }
     }
     
     export default new MenuPage();
