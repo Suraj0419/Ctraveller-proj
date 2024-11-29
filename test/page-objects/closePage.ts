@@ -13,13 +13,43 @@ class closeTransaction {
     await suggestionOption.click();
   }
 
-  async closedSuccessfully() {
-    let actualText = (await $(`//div[contains(text(), 'Closed successfully on')]`)).getText();
-    return actualText;
+  async selectRouteDropdownForNonValidCase(routeCard: string) {
+    await (await this.routeDropdown).click();
+    await (await this.routeDropdown).setValue(routeCard);
   }
 
-  get submitButton() {
-    return $("//button[@type='submit']");
+  async getAlert(msg) {
+    const messageXPath = `//*[contains(text(), '${msg}')]`
+    return await $(messageXPath);
+  }
+
+//span[@style='color:black']
+
+async getStatusText() {
+  const messageXPath = "//span[contains(@style, 'color:')]"
+  return await $(messageXPath);
+}
+
+
+  submitButton() {
+    return $('[type="submit"]');
+  }
+
+  get getProductText(){
+    return  $('//h4[text()="Product:"]');
+  }
+
+
+  async clickSubmitButton() {
+    await this.submitButton().click();
+  }
+
+  async okButton() {
+    return await $('//button[text()="Ok"]');
+  }
+
+  async clickOk(){
+    await(await this.okButton()).click();
   }
 }
 

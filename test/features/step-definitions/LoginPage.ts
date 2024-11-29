@@ -28,13 +28,13 @@ When(/^Login with (.*) and (.*).$/,async function(username,password){
   }
     })
 
-    Then(/^Check whether it matches the (.*) of the Home Page$/,async function(text){
+    Then(/^"Dashboard Demo" on home page should confirm the login functionality.$/,async function(){
      // browser.debug();
      try{
      // await browser.pause(20000);let homeHeading = await HomePage.Heading();
      await HomePage.heading.waitForDisplayed({ timeout: 10000 });
      let homeHeading = await HomePage.Heading()
-      expect(homeHeading).to.equal(text)
+      expect(homeHeading).to.equal('Dashboard Demo')
       //await browser.debug();
     
      }

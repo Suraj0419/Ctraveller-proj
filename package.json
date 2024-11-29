@@ -8,6 +8,8 @@
     "test:debug": "cross-env && npx wdio config/wdio.test.conf.ts --cucumberOpts.tagExpression='@demo' > output.txt",
     "test:demo": "cross-env && npx wdio config/wdio.test.conf.ts --cucumberOpts.tagExpression='@demo'",
     "test:smoke": "cross-env && npx wdio config/wdio.test.conf.ts --cucumberOpts.tagExpression='@smoke'",
+    "test:smoke1": "cross-env && npx wdio config/wdio.test.conf.ts --cucumberOpts.tagExpression='@smoke1'",
+    "test:smoke2": "cross-env && npx wdio config/wdio.test.conf.ts --cucumberOpts.tagExpression='@smoke2'",
     "uat:debug": "cross-env && npx wdio config/wdio.test.conf.ts --cucumberOpts.tagExpression='@smoke'",
     "uat:demo": "cross-env && npx wdio config/wdio.uat.conf.ts --cucumberOpts.tagExpression='@demo'",
     "uat:smoke": "cross-env && npx wdio config/wdio.uat.conf.ts --cucumberOpts.tagExpression='@smoke'",
@@ -24,6 +26,7 @@
   "author": "Sanjay",
   "license": "ISC",
   "devDependencies": {
+    "@types/mssql": "^9.1.5",
     "@types/supertest": "^6.0.2",
     "@wdio/allure-reporter": "^8.28.6",
     "@wdio/cli": "^8.27.1",
@@ -41,6 +44,8 @@
     "winston": "^3.11.0"
   },
   "dependencies": {
-    "@types/chai": "^4.3.11"
+    "@types/chai": "^4.3.11",
+    "mssql": "^10.0.2",
+    "mysql": "^2.18.1"
   }
 }

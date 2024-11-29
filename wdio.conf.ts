@@ -64,7 +64,7 @@ export const config: Options.Testrunner = {
   // and 30 processes will get spawned. The property handles how many capabilities
   // from the same test should run tests.
   //
-  maxInstances: 10,
+  maxInstances: 3,
   //
   // If you have trouble getting all important capabilities together, check out the
   // Sauce Labs platform configurator - a great tool to configure your capabilities:
@@ -83,7 +83,7 @@ export const config: Options.Testrunner = {
        *  "binary=<location>",
        *  --auth-server-whitelist="_"
        */
-      maxInstances: 1,
+      maxInstances: 3,
 
       browserName: "chrome",
       //environment: "TEST",
@@ -102,8 +102,8 @@ export const config: Options.Testrunner = {
       acceptInsecureCerts: true,
 
       timeouts: {
-        implicit: 5000,
-        pageLoad: 20000,
+        implicit: 5000,  // Keep this as is or slightly lower it
+        pageLoad: 20000, // 20 seconds should be sufficient unless the application is very slow
         script: 30000,
       },
       // Use the values from the test configuration
@@ -284,6 +284,8 @@ export const config: Options.Testrunner = {
    * @param {GherkinDocument.IFeature} feature  Cucumber feature object
    */
    beforeFeature: async function (uri: string, feature: GherkinDocument.IFeature) {
+    console.log(feature);
+    if(feature.name!='Sign In Transaction' && feature.name!='Sign Out Transaction'){
     await LoginPage.open("http://192.168.1.101:8087/");
     await LoginHelper.login(
       LoginPage.usernameInput,
@@ -292,6 +294,11 @@ export const config: Options.Testrunner = {
       "dts@123"
     );
     await(await LoginPage.submitButton).click()
+  //await browser.pause(10000);
+  }
+  else{
+    console.log('Sign in called')
+  }
    },
   /**
    *

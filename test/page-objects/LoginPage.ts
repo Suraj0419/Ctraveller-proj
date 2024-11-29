@@ -11,6 +11,10 @@ class Login extends Page {
     return super.open(path)
   }
 
+  async getLoginText(){
+    return $('//h1[text()="Sign in CTraveller"]');
+  }
+
 
   async login (username:string, password:string) {
 

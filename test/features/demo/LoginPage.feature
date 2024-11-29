@@ -1,15 +1,14 @@
-Feature: POM Feature
+Feature: Sign In Transaction
 
-    Feature Description: Feature to illustrate the POM
- @rnd
-Scenario Outline: Run POM Feature
+    Feature Description: Feature to illustrate the SignIn Transaction.
+
+Scenario Outline: Run Login Feature
 
 Given Go to Ctraveller Login Page
 When Login with <Username> and <Password>.
-Then Check whether it matches the <Text> of the Home Page
+Then "Dashboard Demo" on home page should confirm the login functionality.
 Examples:
-    | Username | Password | Text |
-    | amogha.s@dhruvts.com  | dts@123  | Dashboard demo  |
-    | abc@dhruvts.com  | dts@12345  | Dashboard demo |
+    | Username | Password | 
+    | amogha.s@dhruvts.com  | dts@123  | 
     
 

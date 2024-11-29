@@ -11,6 +11,15 @@ class HoldTransaction {
     return $('[type="submit"]');
   }
 
+  
+  async okButton() {
+    return $('//button[text()="Ok"]');
+  }
+
+  async clickOk(){
+    await(await this.okButton()).click();
+  }
+
   async selectRouteDropdown(routeCard: string) {
     await (await this.routeDropdown).click();
     await (await this.routeDropdown).setValue(routeCard);
@@ -27,9 +36,24 @@ class HoldTransaction {
     await suggestionOption.click();
   }
 
-  async clickSubmitButton() {
-    await this.submitButton().click();
+  async selectDropdownForHoldRoute(holdRoute: string) {
+    await (await this.routeDropdown).click();
+    await (await this.routeDropdown).setValue(holdRoute);
   }
+
+  async clickSubmitButton() {
+    await this.submitButton.click();
+  }
+
+  async getValidationError() {
+    const messageXPath = "//*[contains(text(), 'Hold Reason is required')]";
+    return await $(messageXPath);
+  }
+  async getHoldValidationError() {
+    const messageXPath = "//*[contains(text(), 'already is in Hold state.')]";
+    return await $(messageXPath);
+  }
+  
 
   //put on Hold
 

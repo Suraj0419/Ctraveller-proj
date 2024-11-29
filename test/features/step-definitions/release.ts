@@ -13,14 +13,36 @@ Given(/^Go to Release Transaction screen.$/, async function () {
     await (await menuPage.releaseTransaction()).click();
   } catch (err) {
     console.log(err);
+    throw new AssertionError(`Something Wrong Happened ${err.message}`);
+    
   }
 });
 
 //Scan the <Route> for details in the Release Screen.
-
+// Scan the hold Route <Route> in the release screen.
 When(/^Scan the (.*) for details in the Release Screen.$/, async function (route: string) {
   try {
     await ReleaseTransaction.selectRouteDropdown(route);
+    await (await ReleaseTransaction.getProductText).click();
+  } catch (err) {
+    console.log(`Your error message is ${err}`);
+    throw new AssertionError(`Something Wrong Happened ${err.message}`);
+  }
+});
+
+When(/^Scan the hold Route (.*) in the release screen.$/, async function (route: string) {
+  try {
+    await ReleaseTransaction.selectRouteDropdownForValidCases(route);
+    await (await ReleaseTransaction.getProductText).click();
+  } catch (err) {
+    console.log(`Your error message is ${err}`);
+    throw new AssertionError(`Something Wrong Happened ${err.message}`);
+  }
+});
+
+When(/^Enter the invalid RouteCard (.*) for details in the Release Screen.$/, async function (route: string) {
+  try {
+    await ReleaseTransaction.selectRouteDropdownForValidCases(route);
     await (await ReleaseTransaction.getProductText).click();
   } catch (err) {
     console.log(`Your error message is ${err}`);
@@ -49,8 +71,53 @@ Then(
   /^"Released successfully" should confirm the release transaction.$/,
   async function () {
     try {
-      const expectedResult = await (await ReleaseTransaction.getAlert()).getText();
+      const expectedResult = await (await ReleaseTransaction.getAlert('Released successfully')).getText();
       expect(expectedResult).includes("Released successfully");
+      await ReleaseTransaction.clickOk();
+    } catch (err) {
+      console.log(`Your error message is ${err}`);
+      throw new AssertionError(`Transaction Failed ${err.message}`);
+    }
+  }
+);
+
+Then(
+  /^"Invalid RouteCard, Please scan valid RouteCard" should confirm the release transaction.$/,
+  async function () {
+    try {
+      const expectedResult = await (await ReleaseTransaction.getAlert('Invalid RouteCard, Please scan valid RouteCard')).getText();
+      expect(expectedResult).includes("Invalid RouteCard, Please scan valid RouteCard");
+      await ReleaseTransaction.clickOk();
+    } catch (err) {
+      console.log(`Your error message is ${err}`);
+      throw new AssertionError(`Transaction Failed ${err.message}`);
+    }
+  }
+);
+//"Release Reason is required" should come as error.
+
+
+Then(
+  /^"Release Reason is required" should come as error.$/,
+  async function () {
+    try {
+      const expectedResult = await (await ReleaseTransaction.getAlert('Release Reason is required')).getText();
+      expect(expectedResult).includes("Release Reason is required");
+      //await ReleaseTransaction.clickOk();
+    } catch (err) {
+      console.log(`Your error message is ${err}`);
+      throw new AssertionError(`Transaction Failed ${err.message}`);
+    }
+  }
+);
+
+Then(
+  /^"is not on Hold." should come as error alert in the release screen.$/,
+  async function () {
+    try {
+      const expectedResult = await (await ReleaseTransaction.getAlert('is not on Hold.')).getText();
+      expect(expectedResult).includes("is not on Hold.");
+      await ReleaseTransaction.clickOk();
     } catch (err) {
       console.log(`Your error message is ${err}`);
       throw new AssertionError(`Transaction Failed ${err.message}`);

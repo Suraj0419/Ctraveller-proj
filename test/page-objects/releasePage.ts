@@ -9,6 +9,14 @@ class ReleaseTransaction {
    submitButton() {
      return $('[type="submit"]');
    }
+
+   async okButton() {
+    return $('//button[text()="Ok"]');
+  }
+
+  async clickOk(){
+    await(await this.okButton()).click();
+  }
  
    async selectRouteDropdown(routeCard: string) {
     await (await this.routeDropdown).click();
@@ -20,6 +28,10 @@ class ReleaseTransaction {
      await suggestionOption.click();
    }
 
+   async selectRouteDropdownForValidCases(routeCard: string) {
+    await (await this.routeDropdown).click();
+    await (await this.routeDropdown).setValue(routeCard);
+   }
    async selectReleaseReasonDropdown(releaseReason: string) {
     await (await this.releaseReasonDropdown).click();
     const suggestionOption = await browser.$(`//*[text()="${releaseReason}"]`);
@@ -32,8 +44,8 @@ class ReleaseTransaction {
 
    //put on Hold
 
-   async getAlert() {
-    const messageXPath = "//*[contains(text(), 'Released successfully')]";
+   async getAlert(msg) {
+    const messageXPath = `//*[contains(text(), '${msg}')]`
     return await $(messageXPath);
   }
  

@@ -7,8 +7,12 @@ class MenuPage{
        
         return await $('//*[@id="root"]/div/div/div/div/ul/a[3]/div[2]/span').getText()
     }
+
     async  transactionMenuItem(){
         return await $('//span[text()="Transaction"]');
+    }
+    async  logOutMenuItem(){
+        return await $('//span[text()="Logout"]');
     }
 
     async  transactionSubMenu(){
@@ -16,7 +20,7 @@ class MenuPage{
     }
 
     async moveTransaction(){
-        return await $('//*[@id="root"]/div/div/main/div[2]/div[1]/ul/li[2]');
+        return await $('//span[text()="Move"]');
     }
     async holdTransaction(){
         return await $('//span[text()="Hold"]');
@@ -33,8 +37,57 @@ class MenuPage{
     async openTransaction(){
         return await $('//span[text()="Open"]');
     }
+    async associateTransaction(){
+        console.log('associate called')
+        return await $('//span[text()="Associate"]');
+    }
+    async splitRouteCardTransaction(){
+       
+        return await $('//span[text()="Split Routecard"]');
+    }
+    async splitQtyCardTransaction(){
+       
+        return await $('//span[text()="Split Qty"]');
+    }
+    async combineQtyTransaction(){
+       
+        return await $('//span[text()="Combine Qty"]');
+    }
+    //Data Collection
+    async combineRouteCardTransaction(){
+        //console.log('associate called')
+        return await $('//span[text()="Combine RouteCard"]');
+    }
+    async componentReplaceTransaction(){
+        return await $('//span[text()="Component Replace"]');
+    }
+    async componentIssueTransaction(){
+        return await $('//span[text()="Component Issue"]');
+    }
+    async componentRemoveTransaction(){
+        return await $('//span[text()="Component Remove"]');
+    }
+    async dataCollectionTransaction(){
+        return await $('//span[text()="Data Collection"]');
+    }
+    
+    async changeQtyTransaction(){
+        console.log('associate called')
+        return await $('//span[text()="Change Qty"]');
+    }
+    async routeCardMaintenanceTransaction(){
+       // console.log('associate called')
+        return await $('//span[text()="RouteCard Maintenance"]');
+    }
+    async DissociateTransaction(){
+        console.log('disassociate called')
+        return await $('//span[text()="Disassociate"]');
+    }
     async moveNonStandardTransaction(){
         return await $('//span[text()="Move Non Std"]');
+    }
+    async reworkTransaction(){
+        return await $('//span[text()="Rework"]');
     }
     async closeTransactionMenu(){
         return await $("//span[text()='Close']");

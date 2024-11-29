@@ -42,7 +42,13 @@ When(/^Click on the (.*) for the route in move non standard screen.$/, async fun
 When(/^Click on the ProcessWorkflow (.*) in the move non standard screen.$/, async function (processflow: string) {
     // browser.debug();
     try {
-      await MoveNonStandardTransaction.selectToProcessFlowDropdown(processflow);
+      await MoveNonStandardTransaction.clickProcessFlowDropdown();
+      //  const processFlowStrArr=processFlow.split(':');
+        
+       
+          const processFlowStrArr=processflow.split(':');
+          await MoveNonStandardTransaction.clickProductRevision(processFlowStrArr[0])
+          await MoveNonStandardTransaction.clickProductInnerRevision(processflow)
     } catch (err) {
       throw new AssertionError(` ProcessWorkflow select failed ${err.message}`);
     }
@@ -71,12 +77,50 @@ Then(
   async function () {
     try {
       const expectedResult = await (
-        await MoveNonStandardTransaction.getAlert()
+        await MoveNonStandardTransaction.getAlert('moved to')
       ).getText();
       expect(expectedResult).includes('moved to');
+     await MoveNonStandardTransaction.clickOk();
     } catch (err) {
       console.log(`Your error message is ${err}`);
       throw new AssertionError(`Transaction Failed ${err.message}`);
     }
   }
 );
+
+Then(
+  /^"is in same step as selected" should come as error alert.$/,
+  async function () {
+    try {
+      const expectedResult = await (
+        await MoveNonStandardTransaction.getAlert('is in same step as selected')
+      ).getText();
+      expect(expectedResult).includes('is in same step as selected');
+    } catch (err) {
+      console.log(`Your error message is ${err}`);
+      throw new AssertionError(`Transaction Failed ${err.message}`);
+    }
+  }
+);
+
+When(
+  /^Select (.*) in the ProcessFlow dropdown.$/,
+  async function (processFlow: string) {
+    try {
+      await MoveNonStandardTransaction.clickProcessFlowDropdown();
+    //  const processFlowStrArr=processFlow.split(':');
+      
+     
+        const processFlowStrArr=processFlow.split(':');
+        await MoveNonStandardTransaction.clickProductRevision(processFlowStrArr[0])
+        await MoveNonStandardTransaction.clickProductInnerRevision(processFlow)
+    
+    
+    } catch (err) {
+      console.log(`Your error message is ${err}`);
+      throw new AssertionError(`Something went wrong ${err.message}`);
+    }
+  }
+);
+
+
