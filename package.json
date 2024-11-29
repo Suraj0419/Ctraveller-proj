@@ -23,7 +23,7 @@
     "e2e",
     "test"
   ],
-  "author": "Sanjay",
+  "author": "Suraj",
   "license": "ISC",
   "devDependencies": {
     "@types/mssql": "^9.1.5",
