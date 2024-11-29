@@ -2,7 +2,7 @@ Feature: Search Feature in Ctraveller
 
     Feature Description: Feature to Search Feature
 
-@smoke2
+@smoke1
 Scenario Outline: Run Search Feature
 
 Given Go to Transaction sub menu.

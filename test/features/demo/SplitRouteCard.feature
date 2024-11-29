@@ -32,7 +32,7 @@ Examples:
 
 
     
-@smoke1
+@smoke2
 Scenario Outline: Run Split transaction for a particular route without selecting routecards.
 
 Given Go to Split RouteCard Transaction screen.
